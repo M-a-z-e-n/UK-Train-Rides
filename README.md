@@ -95,19 +95,12 @@ This dashboard aims to:
 ---
 
 ## 🧮 Key DAX Measures
-
 📊 **Total Sales:** `SUM('Transactions Fact'[Price])`
-
 🛒 **Transaction Count:** `COUNTROWS('Transactions Fact')`
-
 🚆 **Total Delayed Journeys:** `CALCULATE(COUNTROWS('Dim Status'), 'Dim Status'[Journey Status] = "Delayed")`
-
 ❌ **Total Cancelled Journeys:** `CALCULATE(COUNTROWS('Dim Status'), 'Dim Status'[Journey Status] = "Cancelled")`
-
 💳 **Sales by Payment Method:** `CALCULATE(SUM('Transactions Fact'[Price]), ALLEXCEPT('Transactions Fact', 'Transactions Fact'[Payment Method]))`
-
 🎟 **Revenue by Ticket Class:** `CALCULATE(SUM('Transactions Fact'[Price]), ALLEXCEPT('Dim Tickets', 'Dim Tickets'[Ticket Class]))`
-
 🔄 **Running Total Sales:** `CALCULATE([Total Sales], FILTER(ALLSELECTED('Transactions Fact'[Purchase Date]), 'Transactions Fact'[Purchase Date] <= MAX('Transactions Fact'[Purchase Date])))`
 
 
