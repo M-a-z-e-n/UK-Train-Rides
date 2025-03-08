@@ -8,7 +8,7 @@
 ## 🏆 Team Details
 - **Team Name:** Insight Hunters
 - **Motto:** "Hunting the Unknown, Revealing the Unseen!"
-- **Project Leader:** Abdallh Mohamed Abdelmonem Soliman
+- **Project Leader:** Moustafa Sayem Abdel-tawwab
 - **Team Members:**
   - Mazen Moustafa Sayem Abdel-tawwab
   - Shahd Noman Esawy Esawy
