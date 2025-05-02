@@ -147,6 +147,12 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 
 ### 📊 Analytical Dashboards  
 
+<p align="center">
+  <img src="assets/dashboard_analytical_1.png" width="48%" />
+  <img src="assets/dashboard_analytical_2.png" width="48%" />
+</p>
+<p align="center"><i>Trip volumes, journey status, and customer behavior insights across two dashboards.</i></p>
+
 ![Customer Insights 1](assets/dashboard_analytical_1.png)  
 *Overview of trip volumes, on-time performance, and customer behavior by ticket class.*
 
@@ -156,6 +162,18 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 ---
 
 ### ⚙ Operational Dashboards  
+<p align="center">
+  <img src="assets/dashboard_operational_1.png" width="48%" />
+  <img src="assets/dashboard_operational_2.png" width="48%" />
+</p>
+
+<p align="center"><i>Financial loss, delay frequency, and refund analysis.</i></p>
+<p align="center">
+  <img src="assets/dashboard_operational_3.png" width="48%" />
+  <img src="assets/dashboard_operational_4.png" width="48%" />
+</p>
+<p align="center"><i>Financial loss, delay frequency, and refund analysis.</i></p>
+
 
 ![Operational Overview 1](assets/dashboard_operational_1.png)  
 *Delay cost distribution by reason and time, highlighting key financial inefficiencies.*
