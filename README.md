@@ -182,4 +182,4 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 
 ---
 
-> Made with ❤️  by **Insight Hunters **
+> Made with ❤️  by **Insight Hunters**
