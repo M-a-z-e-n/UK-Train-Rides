@@ -127,20 +127,27 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 
 ## 🖼 Dashboard Previews
 
-### 🧭 Home Page  
-![Home Dashboard](assets/dashboard_home.png)
+### 🏠 Home & Navigation  
+![Home Page](assets/dashboard_home.png)  
+![Navigation Panel](assets/dashboard_nav.png)  
 
-### 📊 Analytical Dashboard  
-![Analytical Dashboard](assets/dashboard_analytical.png)
+### 📊 Analytical Dashboards  
+![Customer Insights 1](assets/dashboard_analytical_1.png)  
+![Customer Insights 2](assets/dashboard_analytical_2.png)  
+![Data Dictionary](assets/dashboard_data_dictionary.png)  
 
-### 🎯 Strategic Dashboard  
-![Strategic Dashboard](assets/dashboard_strategic.png)
+### 🧠 Strategic Dashboard  
+![Strategic Insights](assets/dashboard_strategic.png)  
 
-### ⚙ Operational Dashboard  
-![Operational Dashboard](assets/dashboard_operational.png)
+### ⚙ Operational Dashboards  
+![Operational Overview 1](assets/dashboard_operational_1.png)  
+![Operational Overview 2](assets/dashboard_operational_2.png)  
+![Operational Metrics 3](assets/dashboard_operational_3.png)  
+![Operational Metrics 4](assets/dashboard_operational_4.png)  
 
-### 💡 Recommendations  
-![Recommendations](assets/dashboard_recommendations.png)
+### 💡 Recommendations & Q&A  
+![Recommendations](assets/dashboard_recommendations.png)  
+![Q&A Page](assets/dashboard_Q&A.png)  
 
 ---
 
