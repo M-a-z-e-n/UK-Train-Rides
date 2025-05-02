@@ -137,6 +137,14 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 
 ---
 
+
+### 🧠 Strategic Dashboard  
+
+![Strategic Insights](assets/dashboard_strategic.png)  
+*Breakdown of total rides, delays, revenue, and performance trends by station and time.*
+
+---
+
 ### 📊 Analytical Dashboards  
 
 ![Customer Insights 1](assets/dashboard_analytical_1.png)  
@@ -144,16 +152,6 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 
 ![Customer Insights 2](assets/dashboard_analytical_2.png)  
 *Insights into journey statuses and ticket distribution with map visualizations of key stations.*
-
-![Data Dictionary](assets/dashboard_data_dictionary.png)  
-*Field definitions and metadata to support transparency and maintain data understanding.*
-
----
-
-### 🧠 Strategic Dashboard  
-
-![Strategic Insights](assets/dashboard_strategic.png)  
-*Breakdown of total rides, delays, revenue, and performance trends by station and time.*
 
 ---
 
@@ -175,11 +173,16 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 
 ### 💡 Recommendations & Q&A  
 
+![Q&A Page](assets/dashboard_Q&A.png)  
+*Business questions mapped to visuals, tying analysis back to real-world objectives.*
+
+![Data Dictionary](assets/dashboard_data_dictionary.png)  
+*Field definitions and metadata to support transparency and maintain data understanding.*
+
+
 ![Recommendations](assets/dashboard_recommendations.png)  
 *Strategic takeaways and future action points to enhance operations and customer trust.*
 
-![Q&A Page](assets/dashboard_Q&A.png)  
-*Business questions mapped to visuals, tying analysis back to real-world objectives.*
 ---
 
 ## 🚧 Challenges & Enhancements
