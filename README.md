@@ -128,27 +128,58 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 ## 🖼 Dashboard Previews
 
 ### 🏠 Home & Navigation  
+
 ![Home Page](assets/dashboard_home.png)  
+*High-level landing page with key navigation and summary KPIs for executive users.*
+
 ![Navigation Panel](assets/dashboard_nav.png)  
+*Interactive sidebar guiding users across strategic, analytical, and operational views.*
+
+---
 
 ### 📊 Analytical Dashboards  
+
 ![Customer Insights 1](assets/dashboard_analytical_1.png)  
+*Overview of trip volumes, on-time performance, and customer behavior by ticket class.*
+
 ![Customer Insights 2](assets/dashboard_analytical_2.png)  
+*Insights into journey statuses and ticket distribution with map visualizations of key stations.*
+
 ![Data Dictionary](assets/dashboard_data_dictionary.png)  
+*Field definitions and metadata to support transparency and maintain data understanding.*
+
+---
 
 ### 🧠 Strategic Dashboard  
+
 ![Strategic Insights](assets/dashboard_strategic.png)  
+*Breakdown of total rides, delays, revenue, and performance trends by station and time.*
+
+---
 
 ### ⚙ Operational Dashboards  
+
 ![Operational Overview 1](assets/dashboard_operational_1.png)  
+*Delay cost distribution by reason and time, highlighting key financial inefficiencies.*
+
 ![Operational Overview 2](assets/dashboard_operational_2.png)  
+*Detailed bar charts for delay frequency across routes and refund claims per reason.*
+
 ![Operational Metrics 3](assets/dashboard_operational_3.png)  
+*Time series comparing actual vs. scheduled arrival trends, with cause-based breakdowns.*
+
 ![Operational Metrics 4](assets/dashboard_operational_4.png)  
+*Revenue fluctuations linked to disruptions, including trip analysis and Sankey diagrams.*
+
+---
 
 ### 💡 Recommendations & Q&A  
-![Recommendations](assets/dashboard_recommendations.png)  
-![Q&A Page](assets/dashboard_Q&A.png)  
 
+![Recommendations](assets/dashboard_recommendations.png)  
+*Strategic takeaways and future action points to enhance operations and customer trust.*
+
+![Q&A Page](assets/dashboard_Q&A.png)  
+*Business questions mapped to visuals, tying analysis back to real-world objectives.*
 ---
 
 ## 🚧 Challenges & Enhancements
