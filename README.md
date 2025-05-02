@@ -1,173 +1,187 @@
-Here’s the refined version with the enhancements:
+# 🚆 UK Train Rides Dashboard – Insight Hunters 📊
+
+> _"Hunting the Unknown, Revealing the Unseen!"_
+
+A full-scale Power BI project analyzing over **1.8 million UK train journeys** to uncover patterns in **delays**, **sales**, **customer experience**, and **operational efficiency**. This interactive dashboard suite enables transportation analysts and decision-makers to act on real-time KPIs and business intelligence.
 
 ---
 
-# UK Train Rides Dashboard 🚆📊  
+## 🧑‍💼 Team Overview
 
-## 📌 Project Overview  
-**Insight Hunters** presents the **UK Train Rides Dashboard**, an interactive **Power BI** solution providing deep insights into train performance, passenger behavior, and financial trends. This project aims to enhance decision-making for railway services using data-driven strategies.  
-
----
-
-## 🏆 Team Details  
-- **Team Name:** Insight Hunters  
-- **Motto:** *"Hunting the Unknown, Revealing the Unseen!"*  
-- **Project Leader:** Mazen Moustafa Sayem Abdel-tawwab    
-- **Team Members:**  
-  - Mazen Moustafa Sayem Abdel-tawwab  
-  - Shahd Noman Esawy Esawy  
-  - Asmaa Salah Mohamed Alhady  
-  - Abdallh Mohamed Abdelmonem Soliman  
-  - Saif Mohammed Godah  
+| Member Name | ID | Background | Governorate |
+|-------------|----|------------|-------------|
+| Mazen Moustafa Sayem Abdel-tawwab (Team Leader) | 21088542 | Computer Science & AI | Al Fayoum |
+| Shahd Noman Esawy Esawy | 21073980 | Commerce (Accounting) | Al Beheira |
+| Asmaa Salah Mohamed Alhady | 21070416 | Statistics | Al Sharqia |
+| Abdallh Mohamed Abdelmonem Soliman | 21092470 | Computer Science (AI) | Al Dakahlia |
+| Saif Mohammed Godah | 21059914 | Computer Science | Al Dakahlia |
 
 ---
 
-## 🎯 Project Goals  
-This dashboard aims to:  
-✅ **Analyze payment methods** and transaction efficiency.  
-✅ **Identify ticket pricing trends** and revenue streams.  
-✅ **Highlight busiest train stations** and congestion points.  
-✅ **Examine journey delays** and their financial impact.  
-✅ **Assess seasonal demand trends** for strategic planning.  
-✅ **Evaluate real-time operational performance.**  
+## 🎯 Objectives
+
+- ✅ Detect and visualize major **delay reasons** and associated **costs**
+- ✅ Monitor **real-time journey statuses** (on-time, delayed, canceled)
+- ✅ Break down **ticket class distributions** and **purchase patterns**
+- ✅ Reveal **high-traffic routes and stations**
+- ✅ Forecast **seasonal demand** to guide staffing and resources
+- ✅ Build a scalable **Star Schema data model**
 
 ---
 
-## 📊 Key Business Questions & Insights  
+## 📈 Business Questions Addressed
 
-### 🔍 Analytical Dashboard  
-📌 **What are the most commonly used payment methods?**  
-📌 **What is the average ticket price for each ticket type?**  
-📌 **What are the most frequently used departure and arrival stations?**  
+### 📊 Analytical Dashboard
+- What are the most used **departure and arrival stations**?
+- How are **ticket classes** and **journey statuses** distributed?
+- What is the **cost and frequency** of different delay reasons?
+
+### 🎯 Strategic Dashboard
+- How do **delays** impact **revenue and customer satisfaction**?
+- What are the **monthly revenue trends** by purchase date?
+- Which **ticket types and routes** generate the most revenue?
+
+### ⚙ Operational Dashboard
+- What is the **delay trend over time**, and during which hours?
+- How much **revenue is lost due to delays**?
+- What percentage of delays are due to **weather, signals, or staffing**?
+
+---
+
+## 🧼 Data Preparation
+
+### 🔍 Cleaning Steps
+- Replaced missing `Reason for Delay` with `"No Delay"` when status = "On Time"
+- Kept `Actual Arrival Time` as null for canceled trips
+- Verified datetime fields and calculated delay durations
+- Removed duplicates and unnecessary calculated columns
+
+### 🧠 Data Model – Star Schema
+
+| Table | Description |
+|-------|-------------|
+| `Fact Transactions` | Central fact table (ticket sales, delays, routes) |
+| `Dim Tickets` | Ticket class and type |
+| `Dim Route` | Departure and arrival stations |
+| `Dim Status` | Journey status, delay reasons |
+| `Dim Calendar` | Purchase and journey date hierarchy |
+| `Dim Buying Process` | Payment method and type |
+| `Dim Railcard` | Customer segmentation |
+
+---
+
+## 💡 Key KPIs Tracked
+
+- 🔢 **Total Number of Trips**
+- 💰 **Total Revenue & Cost of Delays**
+- 🕒 **Average Delay Duration (minutes)**
+- 📉 **Revenue Lost Due to Delays**
+- 📆 **Trip Distribution by Day and Month**
+- 🧾 **Refund Requests due to Delays**
+- 🎟️ **Ticket Sales by Class**
+- 🚆 **Top Departure & Arrival Stations**
+- 📊 **Delay Frequency by Reason**
+
+---
+
+## 💻 Sample DAX Measures
+
+```DAX
+-- Total Revenue
+Total Revenue = SUM('Fact Transactions'[Price])
+
+-- Average Delay Duration
+Average Delay Time = AVERAGEX('Fact Transactions', [Delay Minutes])
+
+-- Cost Per Delay
+Avg Cost per Delay = DIVIDE([Total Delay Cost], [Delay Reason Count])
+
+-- Delayed Trips by Reason
+Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason for Delay] <> "No Delay"))
+```
+
+---
+
+## 🎨 Dashboard Design
+
+### 🎨 Color Palette
+| Purpose | Color |
+|---------|--------|
+| Background | `#F7F7F7` |
+| Highlights & KPIs | `#FFB22C` |
+| Charts | `#854836` |
+| Text | `#000000` |
+
+### 📊 Report Structure
+
+| Page | Description |
+|------|-------------|
+| **Home** | Navigation + KPI Overview |
+| **Executive Summary** | C-Level metrics and trends |
+| **Analytical Dashboard** | Customer insights & station activity |
+| **Operational Dashboard** | Delay monitoring & cost |
+| **Strategic Dashboard** | Revenue trends & ridership |
+| **Recommendations** | Key takeaways & future actions |
+
+---
+
+## 🖼 Dashboard Previews
+
+### 🧭 Home Page  
+![Home Dashboard](assets/dashboard_home.png)
+
+### 📊 Analytical Dashboard  
+![Analytical Dashboard](assets/dashboard_analytical.png)
 
 ### 🎯 Strategic Dashboard  
-📌 **How do journey delays impact customer satisfaction and revenue?**  
-📌 **Which ticket categories generate the highest revenue?**  
-📌 **What are the seasonal demand trends for tickets?**  
+![Strategic Dashboard](assets/dashboard_strategic.png)
 
 ### ⚙ Operational Dashboard  
-📌 **What is the percentage of on-time vs. delayed journeys?**  
-📌 **What are the most common reasons for journey delays?**  
-📌 **How many refund requests have been submitted due to delays?**  
+![Operational Dashboard](assets/dashboard_operational.png)
+
+### 💡 Recommendations  
+![Recommendations](assets/dashboard_recommendations.png)
+
+> 📌 *Make sure to upload your images to the `assets/` folder in your repository for proper rendering.*
 
 ---
 
-## 🎨 Dashboard Design  
+## 🚧 Challenges & Enhancements
 
-### 🎨 **Color Palette**  
-🎨 **Background:** `#F7F7F7`  
-🎨 **Highlights & KPI Cards:** `#FFB22C`  
-🎨 **Charts & Graphs:** `#854836`  
-🎨 **Text & Contrast:** `#000000`  
+### ❗ Challenges
+- Inconsistent datetime formats and null values for canceled journeys
+- Designing role-playing date dimensions for both **purchase** and **journey** dates
+- Balancing **performance** with advanced visuals and calculations
 
-### 🖥 **Dashboard Mockups**  
-
-#### **Analytical Dashboard**  
-📊 **Bar Charts & Pie Charts** for payment method insights.  
-🎟 **Ticket pricing trends** per category.  
-🚉 **Station traffic visualization** (Top 5 busiest stations & heatmaps).  
-
-#### **Strategic Dashboard**  
-🔗 **Correlation analysis** between delays & refunds.  
-💰 **Revenue breakdown** by ticket category.  
-📈 **Time Series Analysis** for seasonal demand trends.  
-
-#### **Operational Dashboard**  
-⏰ **Real-time monitoring** of journey punctuality.  
-🛑 **Delay reasons analysis** with bar charts & tree maps.  
-💵 **Refund requests impact assessment**.  
+### 🌱 Future Improvements
+- 🔮 Machine Learning model to **predict delays**
+- 💬 Sentiment analysis from **customer feedback**
+- 📊 "What-if" pricing scenario modeling
+- 🔗 Real-time data integration with APIs
 
 ---
 
-## 🔄 Data Processing & Modeling  
+## 🗂 Repository Structure
 
-### 🧹 **Data Cleaning**  
-✔ Removed empty values in **Reason for Delay** column by setting "On Time" as default.  
-✔ Verified **data types** to ensure smooth processing.  
-✔ Managed **null values** in actual time for canceled journeys.  
-
-### 🌟 **Star Schema Data Model**  
-✅ **Fact Table:** `Transactions Fact` (Holds transactional data)  
-✅ **Dimension Tables:**  
-- `Dim Tickets` 🎫 (Ticket details)  
-- `Dim Journeys` 🚆 (Journey details)  
-- `Dim Status` 🚦 (Journey status & delays)  
+```
+📦 UK-Train-Rides-Analytics
+ ┣ 📁 assets/                    → Dashboard screenshots
+ ┣ 📁 Data/                      → Cleaned CSVs or Excel (if public)
+ ┣ 📁 Dashboard/                → Power BI .pbix file
+ ┣ 📁 Docs/                      → PDF Reports or Docs
+ ┣ 📁 Scripts/                   → SQL or Python code (optional)
+ ┗ 📄 README.md                  → This file
+```
 
 ---
 
-## 📌 Power BI Relationships  
-🔗 `Transactions Fact` → `Dim Tickets` *(1-to-Many)*  
-🔗 `Transactions Fact` → `Dim Journeys` *(1-to-Many)*  
-🔗 `Dim Journeys` → `Dim Status` *(1-to-Many)*  
+## 👨‍💻 Maintainer
+
+**Mazen Moustafa Sayem Abdel-tawwab**  
+📧 mazen110.net@gmail.com  
+📱 +20 155 565 7877  
+🔗 [LinkedIn Profile](https://linkedin.com/in/mazen-abdel-tawwab)
 
 ---
 
-## 🧮 Key DAX Measures  
-
-### 💰 **Sales & Revenue Metrics**  
-📊 **Total Sales:**  
-```DAX
-SUM('Transactions Fact'[Price])
-```  
-🛒 **Transaction Count:**  
-```DAX
-COUNTROWS('Transactions Fact')
-```  
-🎟 **Revenue by Ticket Class:**  
-```DAX
-CALCULATE(SUM('Transactions Fact'[Price]), ALLEXCEPT('Dim Tickets', 'Dim Tickets'[Ticket Class]))
-```  
-🔄 **Running Total Sales:**  
-```DAX
-CALCULATE([Total Sales], 
-    FILTER(ALLSELECTED('Transactions Fact'[Purchase Date]), 
-    'Transactions Fact'[Purchase Date] <= MAX('Transactions Fact'[Purchase Date])))
-```  
-
-### 🚆 **Journey Performance Metrics**  
-🚆 **Total Delayed Journeys:**  
-```DAX
-CALCULATE(COUNTROWS('Dim Status'), 'Dim Status'[Journey Status] = "Delayed")
-```  
-❌ **Total Cancelled Journeys:**  
-```DAX
-CALCULATE(COUNTROWS('Dim Status'), 'Dim Status'[Journey Status] = "Cancelled")
-```  
-💳 **Sales by Payment Method:**  
-```DAX
-CALCULATE(SUM('Transactions Fact'[Price]), ALLEXCEPT('Transactions Fact', 'Transactions Fact'[Payment Method]))
-```  
-
----
-
-## ⚡ Challenges Faced & Future Work  
-
-### 🔴 **Challenges Faced**  
-🔹 **Data Inconsistencies**: Some datasets contained missing timestamps, requiring imputation strategies.  
-🔹 **Complex Relationships**: Ensuring correct relationships in the **Star Schema** while maintaining dashboard performance.  
-🔹 **Real-Time Data Limitations**: Current dataset lacks real-time updates, affecting live monitoring capabilities.  
-
-### 🚀 **Future Enhancements**  
-🔹 **Machine Learning for Delay Prediction**: Implement predictive modeling to forecast train delays based on historical data.  
-🔹 **Sentiment Analysis on Customer Reviews**: Analyze passenger reviews to identify areas for service improvement.  
-🔹 **Interactive What-If Analysis**: Allow users to simulate different pricing strategies and their impact on revenue.  
-
----
-
-## 📢 Conclusion  
-This **Power BI dashboard** empowers railway operators with **data-driven insights** to enhance service efficiency, optimize pricing, and improve passenger satisfaction. 🚆📈  
-
----
-
-## 📎 Repository Contents  
-📂 `Data/` → Cleaned datasets (if public)  
-📂 `Dashboard/` → `.pbix` files & screenshots  
-📂 `Scripts/` → Python/SQL scripts (if applicable)  
-📂 `Docs/` → Project documentation  
-
-📌 **Created by:** *Insight Hunters - Capstone Project W14* 🚀  
-
----
-
-### 🔥 **Final Thoughts**  
-This refined version improves readability, business focus, and strategic direction. Let me know if you'd like any additional refinements! 🚀
+> Made with 💡 by **Insight Hunters – Capstone Project W14**
