@@ -8,13 +8,13 @@ A full-scale Power BI project analyzing over **1.8 million UK train journeys** t
 
 ## 🧑‍💼 Team Overview
 
-| Member Name | Role | Background | Governorate |
-|-------------|----|------------|-------------|
-| Mazen Moustafa Sayem Abdel-tawwab | Team Leader | Computer Science & AI | Al Fayoum |
-| Shahd Noman Esawy Esawy | Data Analyst | Commerce (Accounting) | Al Beheira |
-| Asmaa Salah Mohamed Alhady | Data Quality & Modeling | Statistics | Al Sharqia |
-| Abdallh Mohamed Abdelmonem Soliman | Visualization Specialist | Computer Science (AI) | Al Dakahlia |
-| Saif Mohammed Godah | Dashboard Designer | Computer Science | Al Dakahlia |
+| Member Name                            | Role(s)                                                   | Background            | Governorate |
+| -------------------------------------- | --------------------------------------------------------- | --------------------- | ----------- |
+| **Mazen Moustafa Sayem Abdel-tawwab**  | Team Leader, Dashboard Designer, Data Cleaning & Modeling | Computer Science & AI | Al Fayoum   |
+| **Shahd Noman Esawy Esawy**            | Operational Dashboard Developer                           | Commerce (Accounting) | Al Beheira  |
+| **Asmaa Salah Mohamed Alhady**         | Executive Summary & Strategic Dashboard                   | Statistics            | Al Sharqia  |
+| **Abdallh Mohamed Abdelmonem Soliman** | Home Page & Navigation                                    | Computer Science (AI) | Al Dakahlia |
+| **Saif Mohammed Godah**                | Analytical Dashboard Developer                            | Computer Science      | Al Dakahlia |
 
 ---
 
