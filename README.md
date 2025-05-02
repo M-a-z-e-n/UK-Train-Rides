@@ -8,13 +8,13 @@ A full-scale Power BI project analyzing over **1.8 million UK train journeys** t
 
 ## 🧑‍💼 Team Overview
 
-| Member Name | ID | Background | Governorate |
+| Member Name | Role | Background | Governorate |
 |-------------|----|------------|-------------|
-| Mazen Moustafa Sayem Abdel-tawwab (Team Leader) | 21088542 | Computer Science & AI | Al Fayoum |
-| Shahd Noman Esawy Esawy | 21073980 | Commerce (Accounting) | Al Beheira |
-| Asmaa Salah Mohamed Alhady | 21070416 | Statistics | Al Sharqia |
-| Abdallh Mohamed Abdelmonem Soliman | 21092470 | Computer Science (AI) | Al Dakahlia |
-| Saif Mohammed Godah | 21059914 | Computer Science | Al Dakahlia |
+| Mazen Moustafa Sayem Abdel-tawwab | Team Leader | Computer Science & AI | Al Fayoum |
+| Shahd Noman Esawy Esawy | Data Analyst | Commerce (Accounting) | Al Beheira |
+| Asmaa Salah Mohamed Alhady | Data Quality & Modeling | Statistics | Al Sharqia |
+| Abdallh Mohamed Abdelmonem Soliman | Visualization Specialist | Computer Science (AI) | Al Dakahlia |
+| Saif Mohammed Godah | Dashboard Designer | Computer Science | Al Dakahlia |
 
 ---
 
@@ -142,8 +142,6 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 ### 💡 Recommendations  
 ![Recommendations](assets/dashboard_recommendations.png)
 
-> 📌 *Make sure to upload your images to the `assets/` folder in your repository for proper rendering.*
-
 ---
 
 ## 🚧 Challenges & Enhancements
@@ -184,4 +182,4 @@ Delayed Trips = COUNTROWS(FILTER('Fact Transactions', 'Fact Transactions'[Reason
 
 ---
 
-> Made with 💡 by **Insight Hunters – Capstone Project W14**
+> Made with ❤️  by **Insight Hunters **
